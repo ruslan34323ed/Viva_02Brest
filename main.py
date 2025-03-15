@@ -44,7 +44,7 @@ async def fetch_news():
 async def check_updates():
     while True:
         await fetch_news()
-        await asyncio.sleep(3600)  # Проверяем страницу раз в час
+        await asyncio.sleep(300)  # Проверяем страницу раз в час
 
 @dp.message(Command("start"))
 async def start_command(message: Message):
